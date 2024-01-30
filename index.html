@@ -6,33 +6,106 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Biglietto treno Input</title>
 
-        <!-- css -->
+        <!-- style -->
         <link rel="stylesheet" href="./css/style.css">
+
+        <!-- bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     </head>
 
     <body>
-        
-        <h1>Titolo</h1>
 
-        <form action="ticket">
-            <label for="ticket">Età</label>
-            <input type="number" id="userAge" value="0"> 
+        <div class="container py-5">
+            
+            <!-- sezione dati utente -->
+            <h1 class="text-center text-white fw-bold text-uppercase">Calcola il prezzo del tuo biglietto</h1>
 
-            <label for="ticket">KM</label>
-            <input type="number" id="userDistance" value="0">
-        </form>
+            <div class="col-10 m-auto mb-5 rounded-2 bg-white">
+                <div class="px-5 py-3">
+                    <form id="myForm" action="#">
+                        <div class="form-container d-flex justify-content-between mb-5">
+                            <div class="input-info d-flex flex-column align-items-center gap-3">
+                                <label for="userName">Nome e Cognome</label>
+                                <input type="text" id="textName" class="input-text" placeholder="Inserisci qui">
+                            </div>
 
-        <button id="button">
-            Calcola
-        </button>
+                            <div class="input-info d-flex flex-column align-items-center gap-3">
+                                <label for="userKm">Km da percorrere</label>
+                                <input type="number" id="userDistance" class="input-text">
+                            </div>
+                            
+                            <div class="input-info d-flex flex-column align-items-center gap-3">
+                                <label for="userAge">Fascia d'età</label>
+                                <input type="number" id="userAge" class="input-text"> 
+                            </div>
+                        </div>
 
-        <div id="price"></div>
-        <div id="error"></div>
+                        <!-- buttons -->
+                        <div class="buttons-form text-center">
+                            <button id="button-calc" class="my_btn">
+                                Genera
+                            </button>
+
+                            <button id="button-delete" class="my_btn">
+                                Annulla
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <!-- stampa biglietto -->
+            <h1 class="text-center text-white fw-bold text-uppercase">Il tuo biglietto</h1>
+
+            <div class="col-10 p-4 m-auto bg-secondary bg-white">
+                
+                <h3 class="fw-bold text-uppercase">Dettaglio passeggero</h3>
+
+                <div class="row border border-secondary">
+                    <div class="col-3 pt-3 bg-secondary">
+                        <h5 class="m-0 fw-bold text-uppercase">Nome passeggero</h5>
+                        <div id="userName" class="fw-bold"></div>
+                    </div>
+
+                    <div class="col-9">
+                        <div class="row py-4">
+
+                            <div class="col-3">
+                                <div class="section-ticket mb-4 fw-bold">Offerta</div>
+                                <div id="ticket-type" class="fw-semibold"></div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="section-ticket mb-4 fw-bold">Carrozza</div>
+                                <div id="seat" class="fw-semibold">5</div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="section-ticket mb-4 fw-bold">Codice CP</div>
+                                <div id="cp-code" class="fw-semibold">92911</div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="section-ticket mb-4 fw-bold">Costo biglietto</div>
+                                <div id="ticket-price" class="fw-semibold"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
 
 
         <!-- js -->
         <script src="./js/script.js"></script>
+
+        <!-- bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
     </body>
 

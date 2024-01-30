@@ -1,0 +1,22 @@
+.container{
+    background-color: #B91450;
+}
+
+.input-text{
+    border: 1px solid #B91450;
+
+    border-radius: 6px;
+
+    text-align: center;
+}
+
+.my_btn{
+    border: 1px solid grey;
+
+    border-radius: 5px;
+
+    color: #B91450;
+
+    font-weight: bold;
+}
+
